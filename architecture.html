@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECLIPSE-RED | System Architecture</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav style="padding: 20px; text-align: center; border-bottom: 1px solid var(--border);">
+        <a href="index.html"
+            style="color: var(--text-primary); text-decoration: none; margin: 0 15px; font-weight: bold;">HOME</a>
+        <a href="architecture.html"
+            style="color: var(--accent-red); text-decoration: none; margin: 0 15px; font-weight: bold;">ARCHITECTURE</a>
+        <a href="team.html"
+            style="color: var(--text-primary); text-decoration: none; margin: 0 15px; font-weight: bold;">TEAM</a>
+    </nav>
+
+    <div class="bg-glow"></div>
+
+    <header class="hero" style="height: 40vh; min-height: 300px;">
+        <div class="container">
+            <h1 class="hero-title" style="font-size: 3rem;">System Architecture</h1>
+            <p class="hero-desc">The Engineering Behind the Swarm</p>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="card" style="margin-bottom: 40px;">
+            <h2 style="color: var(--accent-red); margin-bottom: 20px;">High-Level Overview</h2>
+            <p>ECLIPSE-RED is built on a <strong>Microservices Architecture</strong> orchestrated by a central AI
+                Controller. The system operates in a closed-loop "Observe-Orient-Decide-Act" (OODA) cycle.</p>
+        </div>
+
+        <div class="feature-grid">
+            <!-- Node 1 -->
+            <div class="card">
+                <h3><i class="fas fa-brain"></i> The Brain (C2)</h3>
+                <p><strong>Tech:</strong> Python, LangChain, GPT-4 API</p>
+                <p style="font-size: 0.9rem; margin-top: 10px; color: var(--text-secondary);">The central command unit.
+                    It receives signals from agents, maintains the "Attack State," and issues new objectives. It handles
+                    the logic to prevent hallucinations.</p>
+            </div>
+
+            <!-- Node 2 -->
+            <div class="card">
+                <h3><i class="fas fa-satellite-dish"></i> The Sensors</h3>
+                <p><strong>Tech:</strong> Nmap, Masscan, Burp Suite API</p>
+                <p style="font-size: 0.9rem; margin-top: 10px; color: var(--text-secondary);">Raw data collectors. They
+                    feed port status, HTTP headers, and banner grabs into the Vector Database for the AI to analyze.</p>
+            </div>
+
+            <!-- Node 3 -->
+            <div class="card">
+                <h3><i class="fas fa-terminal"></i> The Executors</h3>
+                <p><strong>Tech:</strong> Metasploit RPC, Custom Python Exploits</p>
+                <p style="font-size: 0.9rem; margin-top: 10px; color: var(--text-secondary);">The "Hands" of the system.
+                    These are scripted modules that the AI can trigger with specific parameters (e.g., "Run
+                    exploit/multi/handler on port 4444").</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="margin-top: 50px;">
+        <h2 class="section-title">The "Moonlight" Differential</h2>
+        <div class="card">
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+                <div style="flex: 1;">
+                    <h3 style="color: #fff;">Conventional Scanners vs. ECLIPSE-RED</h3>
+                    <ul style="list-style: none; margin-top: 20px; color: var(--text-secondary);">
+                        <li style="margin-bottom: 15px;">❌ <strong>Scanners:</strong> blindly check for known CVEs.</li>
+                        <li style="margin-bottom: 15px;">❌ <strong>Scanners:</strong> generate 1000s of false positives.
+                        </li>
+                        <li style="margin-bottom: 15px;">❌ <strong>Scanners:</strong> cannot understand business logic
+                            (e.g., "Buy for $0").</li>
+                    </ul>
+                </div>
+                <div style="flex: 1;">
+                    <h3 style="color: #fff;">&nbsp;</h3>
+                    <ul style="list-style: none; margin-top: 20px; color: var(--text-secondary);">
+                        <li style="margin-bottom: 15px;"><span style="color: var(--accent-red);">✔</span>
+                            <strong>ECLIPSE-RED:</strong> chains multiple weak findings into a critical exploit.</li>
+                        <li style="margin-bottom: 15px;"><span style="color: var(--accent-red);">✔</span>
+                            <strong>ECLIPSE-RED:</strong> verifies exploits before reporting them.</li>
+                        <li style="margin-bottom: 15px;"><span style="color: var(--accent-red);">✔</span>
+                            <strong>ECLIPSE-RED:</strong> reads source code to find 0-day logic flaws.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
