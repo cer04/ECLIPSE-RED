@@ -5,114 +5,329 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="ECLIPSE-RED: Autonomous Agentic Red-Teaming Engine for advanced cybersecurity auditing.">
-    <title>ECLIPSE-RED | Autonomous Offensive Security</title>
+        content="ECLIPSE-RED: Autonomous Agentic Red-Teaming Engine powered by multi-agent LLM reasoning within an isolated cyber range.">
+    <meta name="keywords" content="cybersecurity, red teaming, autonomous agents, offensive security, OODA loop, AI security">
+    <meta name="author" content="Laith Hussam Naser, Wa'ed Mohammed Smhan, Abdallah Ahmad Muawad">
+    <title>ECLIPSE-RED | Autonomous Agentic Red-Teaming Engine</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <div class="bg-glow"></div>
+    <!-- Background Grid & Glowing Orbs -->
+    <div class="cyber-grid"></div>
+    <div class="bg-ambient-glow glow-top-left"></div>
+    <div class="bg-ambient-glow glow-bottom-right"></div>
 
-    <!-- Navigation -->
-    <nav style="position: absolute; top: 0; width: 100%; padding: 20px; text-align: center; z-index: 100;">
-        <a href="index.html"
-            style="color: var(--accent-red); text-decoration: none; margin: 0 15px; font-weight: bold;">HOME</a>
-        <a href="architecture.html"
-            style="color: var(--text-primary); text-decoration: none; margin: 0 15px; font-weight: bold;">ARCHITECTURE</a>
-        <a href="team.html"
-            style="color: var(--text-primary); text-decoration: none; margin: 0 15px; font-weight: bold;">TEAM</a>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-symbol">🌑</span>
+                <span class="logo-text">ECLIPSE-RED</span>
+                <div class="nav-status">
+                    <span class="status-pulse"></span>
+                    <span id="status-beacon-text">SYSTEM OPERATIONAL</span>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active">HOME</a></li>
+                <li><a href="architecture.html" class="nav-link">ARCHITECTURE</a></li>
+                <li><a href="team.html" class="nav-link">OPERATORS</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="https://github.com/cer04/ECLIPSE-RED" target="_blank" rel="noopener" class="btn-github">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
     </nav>
 
+    <!-- Hero Section -->
     <header class="hero">
-        <img src="eclipse_red_hero.png" alt="Hero Background" class="hero-img">
-        <div class="container">
-            <p class="hero-tagline">Project Proposal: Bachelor of Cybersecurity</p>
-            <h1 class="hero-title typing-cursor">ECLIPSE-RED</h1>
-            <p class="hero-desc">The Next Evolution: From Automated to Autonomous Red Teaming.</p>
+        <div class="container hero-content">
+            <div class="hero-pill">
+                <i class="fas fa-shield-halved"></i> Bachelor of Cybersecurity · Graduation Thesis 2026
+            </div>
+            
+            <h1 class="hero-title">ECLIPSE-RED</h1>
+            
+            <p class="hero-subtitle">
+                The Next Evolution in Offensive Cybersecurity: Transitioning from 
+                <strong>blind automated scanning</strong> to an <strong>autonomous multi-agent swarm</strong> 
+                that reasons, adapts, and executes within an isolated cyber range.
+            </p>
 
-            <div class="hero-names">
-                <div class="name-badge">Laith hussam Naser</div>
-                <div class="name-badge">Wa'ed Mohammed Smhan Smhan</div>
-                <div class="name-badge">Abdallah Ahmad Mohammad Muawad</div>
+            <div class="hero-cta-group">
+                <a href="#simulator" class="btn-primary">
+                    <i class="fas fa-terminal"></i> LIVE SWARM SIMULATOR
+                </a>
+                <a href="architecture.html" class="btn-secondary">
+                    <i class="fas fa-network-wired"></i> SYSTEM ARCHITECTURE
+                </a>
             </div>
 
-            <div style="margin-top: 60px;">
-                <a href="#vision" class="name-badge"
-                    style="text-decoration: none; border-color: var(--accent-red); color: white;">Explore The
-                    Intelligence <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 5px;"></i></a>
+            <div class="hero-team-badges">
+                <div class="operator-tag">
+                    <i class="fas fa-brain" style="color: var(--accent-red);"></i>
+                    <span>Laith Hussam Naser</span>
+                    <span class="operator-role-badge">[AI Architect]</span>
+                </div>
+                <div class="operator-tag">
+                    <i class="fas fa-crosshairs" style="color: var(--accent-cyan);"></i>
+                    <span>Wa'ed Mohammed Smhan</span>
+                    <span class="operator-role-badge">[Offensive Eng]</span>
+                </div>
+                <div class="operator-tag">
+                    <i class="fas fa-desktop" style="color: var(--accent-green);"></i>
+                    <span>Abdallah Ahmad Muawad</span>
+                    <span class="operator-role-badge">[C2 Systems]</span>
+                </div>
             </div>
         </div>
     </header>
 
-    <section id="vision" class="container">
-        <h2 class="section-title">The Vision</h2>
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p style="font-size: 1.2rem; color: var(--text-secondary);">
-                In a world where threats operate at machine speed, humans alone cannot defend.
-                <strong>ECLIPSE-RED</strong> is a coordinated swarm of AI agents designed to mimic the complexity
-                of a high-tier hacking group. It researches, infects, and moves through networks
-                using advanced LLM reasoning to bypass traditional security logic.
+    <!-- Interactive Swarm Simulator -->
+    <section id="simulator" class="simulator-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// INTERACTIVE C2 TELEMETRY</span>
+                <h2 class="section-title">Autonomous Swarm Live Simulator</h2>
+                <p class="section-desc">
+                    Experience how ECLIPSE-RED's agents cooperate in real time. Select an attack scenario below to observe the OODA decision matrix stream through the command bus.
+                </p>
+            </div>
+
+            <!-- Terminal Window -->
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-controls">
+                        <span class="terminal-dot dot-red"></span>
+                        <span class="terminal-dot dot-yellow"></span>
+                        <span class="terminal-dot dot-green"></span>
+                    </div>
+                    <div class="terminal-title">
+                        <i class="fas fa-microchip"></i> eclipse-c2://swarm-telemetry/stream-01
+                    </div>
+                    <div class="terminal-meta">
+                        <i class="fas fa-shield-virus"></i> SANDBOXED (172.20.0.0/24)
+                    </div>
+                </div>
+
+                <div class="terminal-body" id="terminal-body">
+                    <!-- Logs dynamically injected by simulator.js -->
+                </div>
+
+                <div class="simulator-toolbar">
+                    <div class="sim-btn-group">
+                        <button class="sim-btn scenario-btn active" data-scenario="sqli">
+                            <i class="fas fa-database"></i> Scenario 1: API SQLi & Hash Dump
+                        </button>
+                        <button class="sim-btn scenario-btn" data-scenario="ssh">
+                            <i class="fas fa-key"></i> Scenario 2: SSH Brute & Root Pivot
+                        </button>
+                        <button class="sim-btn scenario-btn" data-scenario="idor">
+                            <i class="fas fa-unlock-keyhole"></i> Scenario 3: IDOR Logic Bypass
+                        </button>
+                    </div>
+
+                    <div style="display: flex; gap: 10px;">
+                        <button class="sim-btn" id="btn-clear">
+                            <i class="fas fa-trash-can"></i> Clear
+                        </button>
+                        <button class="btn-primary" id="btn-simulate" style="padding: 10px 20px; font-size: 0.85rem;">
+                            <i class="fas fa-play"></i> RUN SWARM SIMULATION
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Swarm Agents Section -->
+    <section class="container" style="padding-bottom: 80px;">
+        <div class="section-header">
+            <span class="section-tag">// COOPERATIVE INTELLIGENCE</span>
+            <h2 class="section-title">The Six-Agent Swarm</h2>
+            <p class="section-desc">
+                Specialized micro-agents coordinated by an LLM-driven central controller, eliminating single points of failure and contextual hallucination.
             </p>
         </div>
-    </section>
 
-    <section id="swarm" class="container">
-        <h2 class="section-title">The Intelligent Swarm</h2>
-        <div class="feature-grid">
-            <div class="card">
-                <h3><i class="fas fa-skull"></i> The Reaper</h3>
-                <p><strong>OSINT & Reconnaissance.</strong> Uses AI to synthesize public data, LinkedIn profiles, and
-                    leaked code to find the "Weakest Link" in a company's armor.</p>
+        <div class="cards-grid">
+            <!-- Reaper -->
+            <div class="cyber-card">
+                <div class="card-header-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3>The Reaper</h3>
+                <p>
+                    <strong>OSINT & Passive Reconnaissance.</strong> Synthesizes public data, network topology, and passive banners to identify attack surfaces without alerting defensive sensors.
+                </p>
+                <div class="card-mitre-tag">
+                    <i class="fas fa-tag"></i> MITRE: <strong>T1595</strong> (Active Scan) / <strong>T1046</strong>
+                </div>
             </div>
-            <div class="card">
-                <h3><i class="fas fa-vial-virus"></i> The Infiltrator</h3>
-                <p><strong>Vulnerability & Exploitation.</strong> Analyzes real-time traffic and API structures. Writes
-                    custom, zero-day style payloads using LLM reasoning to bypass WAFs and Firewalls.</p>
+
+            <!-- Infiltrator -->
+            <div class="cyber-card">
+                <div class="card-header-icon">
+                    <i class="fas fa-virus-slash"></i>
+                </div>
+                <h3>The Infiltrator</h3>
+                <p>
+                    <strong>Weaponization & Exploitation.</strong> Synthesizes contextual payloads using LLM reasoning to bypass WAF logic, validating SQLi, IDOR, and auth flaws before reporting.
+                </p>
+                <div class="card-mitre-tag">
+                    <i class="fas fa-tag"></i> MITRE: <strong>T1190</strong> (Exploit Public-Facing App)
+                </div>
             </div>
-            <div class="card">
-                <h3><i class="fas fa-ghost"></i> The Ghost</h3>
-                <p><strong>Post-Exploitation.</strong> Once inside, it maps lateral movement paths, silences logs, and
-                    identifies high-value assets for strategic exfiltration.</p>
+
+            <!-- Ghost -->
+            <div class="cyber-card">
+                <div class="card-header-icon">
+                    <i class="fas fa-ghost"></i>
+                </div>
+                <h3>The Ghost</h3>
+                <p>
+                    <strong>Post-Exploitation.</strong> Once inside target perimeter, maps lateral movement pivots, extracts environment credentials, and evaluates persistence viability with zero trace.
+                </p>
+                <div class="card-mitre-tag">
+                    <i class="fas fa-tag"></i> MITRE: <strong>T1082</strong> (System Discovery) / <strong>T1003</strong>
+                </div>
+            </div>
+
+            <!-- Scout -->
+            <div class="cyber-card">
+                <div class="card-header-icon">
+                    <i class="fas fa-crosshairs"></i>
+                </div>
+                <h3>The Scout</h3>
+                <p>
+                    <strong>Surgical Target Verification.</strong> Deploys low-noise verification packets to confirm vulnerability validity without overwhelming endpoints or triggering IDS thresholds.
+                </p>
+                <div class="card-mitre-tag">
+                    <i class="fas fa-tag"></i> MITRE: <strong>T1071</strong> (Application Layer Protocol)
+                </div>
+            </div>
+
+            <!-- Researcher -->
+            <div class="cyber-card">
+                <div class="card-header-icon">
+                    <i class="fas fa-book-skull"></i>
+                </div>
+                <h3>The Researcher</h3>
+                <p>
+                    <strong>Threat Intelligence Core.</strong> Queries live vulnerability feeds, NVD, and ExploitDB to retrieve recent exploit techniques tailored to target software versions.
+                </p>
+                <div class="card-mitre-tag">
+                    <i class="fas fa-tag"></i> MITRE: <strong>T1592</strong> (Host Information)
+                </div>
+            </div>
+
+            <!-- Orchestrator -->
+            <div class="cyber-card">
+                <div class="card-header-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>The Orchestrator</h3>
+                <p>
+                    <strong>C2 Swarm Brain.</strong> Governs the OODA cycle. Enforces strict CIDR allowlisting, validates safety boundaries, prevents runaway loops, and emits real-time telemetry.
+                </p>
+                <div class="card-mitre-tag">
+                    <i class="fas fa-tag"></i> CORE: <strong>OODA Brain & Watchdog</strong>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="tech" class="container"
-        style="background: rgba(0,0,0,0.5); border-radius: 30px; border: 1px solid var(--border);">
-        <h2 class="section-title">Technical Core</h2>
-        <div class="tech-stack">
-            <div class="tech-item">
-                <i class="fas fa-brain tech-icon"></i>
-                <p>LLM Reasoning (GPT-4/DeepSeek)</p>
-            </div>
-            <div class="tech-item">
-                <i class="fab fa-docker tech-icon"></i>
-                <p>Sandboxed Docker Swarm</p>
-            </div>
-            <div class="tech-item">
-                <i class="fab fa-python tech-icon"></i>
-                <p>Mitmproxy / Scapy Core</p>
-            </div>
-            <div class="tech-item">
-                <i class="fas fa-network-wired tech-icon"></i>
-                <p>Custom C2 Dashboard</p>
-            </div>
+    <!-- C2 War Room Preview -->
+    <section class="container" style="padding-bottom: 80px;">
+        <div class="section-header">
+            <span class="section-tag">// REAL-TIME C2 WAR ROOM</span>
+            <h2 class="section-title">Operational Command Center</h2>
+            <p class="section-desc">
+                Full-spectrum operational dashboard delivering live terminal logs, attack graph topology, and multi-agent mission control.
+            </p>
+        </div>
+
+        <div style="background: rgba(13, 17, 23, 0.7); border: 1px solid var(--border-accent); border-radius: var(--radius-lg); padding: 12px; box-shadow: 0 0 40px var(--accent-glow-subtle);">
+            <img src="assets/fig_5_1_dashboard.png" alt="ECLIPSE-RED Dashboard UI" style="width: 100%; height: auto; border-radius: var(--radius-md); display: block;" />
         </div>
     </section>
 
-    <section class="container" style="text-align: center; padding-bottom: 200px;">
-        <h2 class="section-title">Project Goal</h2>
-        <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto;">
-            To build a first-of-its-kind autonomous offensive engine that prepares Jordanian organizations
-            for the era of AI-driven cyber warfare.
-        </p>
+    <!-- Scanners vs ECLIPSE-RED Comparison -->
+    <section class="container" style="padding-bottom: 80px;">
+        <div class="section-header">
+            <span class="section-tag">// COMPETITIVE ADVANTAGE</span>
+            <h2 class="section-title">Traditional Scanners vs. ECLIPSE-RED</h2>
+            <p class="section-desc">
+                Why heuristic AI agents surpass static vulnerability scanners in real-world red teaming.
+            </p>
+        </div>
+
+        <div class="comparison-table-wrapper">
+            <table class="comp-table">
+                <thead>
+                    <tr>
+                        <th style="width: 30%;">Capability</th>
+                        <th style="width: 35%;">Traditional Scanners (Nessus, OpenVAS)</th>
+                        <th style="width: 35%;">ECLIPSE-RED Autonomous Swarm</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Vulnerability Chaining</td>
+                        <td class="status-bad"><i class="fas fa-times"></i> Isolated checks; cannot chain</td>
+                        <td class="status-good"><i class="fas fa-check"></i> Chains Info Leak → IDOR → SQLi → Shell</td>
+                    </tr>
+                    <tr>
+                        <td>False Positive Rate</td>
+                        <td class="status-bad"><i class="fas fa-times"></i> High (reports based on version match)</td>
+                        <td class="status-good"><i class="fas fa-check"></i> Near Zero (verifies exploit viability first)</td>
+                    </tr>
+                    <tr>
+                        <td>Business Logic Flaws</td>
+                        <td class="status-bad"><i class="fas fa-times"></i> Cannot comprehend application logic</td>
+                        <td class="status-good"><i class="fas fa-check"></i> LLM reasoning analyzes state & parameters</td>
+                    </tr>
+                    <tr>
+                        <td>Post-Exploitation / Lateral Move</td>
+                        <td class="status-bad"><i class="fas fa-times"></i> Strictly out-of-scope for scanners</td>
+                        <td class="status-good"><i class="fas fa-check"></i> Ghost agent assesses internal pivot paths</td>
+                    </tr>
+                    <tr>
+                        <td>Adaptive Payload Synthesis</td>
+                        <td class="status-bad"><i class="fas fa-times"></i> Static, predictable signatures</td>
+                        <td class="status-good"><i class="fas fa-check"></i> Contextual zero-day style payload generation</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
 
-    <footer
-        style="text-align: center; padding: 40px; color: var(--text-secondary); border-top: 1px solid var(--border);">
-        &copy; 2026 ECLIPSE-RED | University Bachelor Final Project Proposal
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <a href="index.html">HOME</a>
+                <a href="architecture.html">ARCHITECTURE</a>
+                <a href="team.html">OPERATORS</a>
+                <a href="https://github.com/cer04/ECLIPSE-RED" target="_blank" rel="noopener">GITHUB</a>
+            </div>
+            <p style="margin-bottom: 8px;">
+                <strong>ECLIPSE-RED</strong> — Autonomous Agentic Red-Teaming Engine
+            </p>
+            <p style="color: var(--text-muted); font-size: 0.8rem;">
+                Al-Ahliyya Amman University · Bachelor of Cybersecurity · Academic Graduation Thesis 2026. Released under the MIT License.
+            </p>
+        </div>
     </footer>
+
+    <script src="simulator.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,100 @@
+<svg viewBox="0 0 1026 512" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0%" stop-color="#050505"/>
+      <stop offset="55%" stop-color="#0a0304"/>
+      <stop offset="100%" stop-color="#3a0206"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff2a2f"/>
+      <stop offset="100%" stop-color="#8c0410"/>
+    </linearGradient>
+    <linearGradient id="tick" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff3b40"/>
+      <stop offset="100%" stop-color="#7a0209"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1026" height="512" fill="url(#bg)"/>
+
+  <!-- concentric arcs top-right -->
+  <g fill="none" stroke="#ff2a2f" stroke-width="1.4" opacity="0.35">
+    <path d="M470,0 Q760,60 1026,300"/>
+    <path d="M520,0 Q800,55 1026,250"/>
+    <path d="M575,0 Q840,50 1026,205"/>
+    <path d="M635,0 Q885,45 1026,165"/>
+    <path d="M700,0 Q930,40 1026,128"/>
+    <path d="M770,0 Q975,35 1026,92"/>
+  </g>
+
+  <!-- logo + university -->
+  <rect x="28" y="20" width="48" height="44" rx="6" fill="#0d0d0d" stroke="#ffffff" stroke-width="1.6"/>
+  <path d="M52,30 L64,40 L58,40 L58,54 L46,54 L46,40 L40,40 Z" fill="#e0b23a"/>
+  <rect x="48" y="44" width="8" height="10" fill="#2a66c4"/>
+  <text x="88" y="46" fill="#ff3b40" font-size="15" font-weight="800">Amman Arab University</text>
+
+  <!-- title -->
+  <rect x="52" y="98" width="34" height="6" rx="3" fill="url(#tick)"/>
+  <text x="50" y="150" fill="#ffffff" font-size="40" font-weight="800" letter-spacing="1">
+    <tspan>EXPERIMENT</tspan><tspan fill="#d0d0d0" font-size="34" dx="16">SCENARIO</tspan>
+  </text>
+
+  <!-- chevrons -->
+  <g fill="#b3121a">
+    <path d="M862,104 l18,18 l-18,18 l-9,0 l18,-18 l-18,-18 z"/>
+    <path d="M888,104 l18,18 l-18,18 l-9,0 l18,-18 l-18,-18 z" fill="#e01820"/>
+    <path d="M914,104 l18,18 l-18,18 l-9,0 l18,-18 l-18,-18 z" fill="#ff2a2f"/>
+  </g>
+
+  <!-- ========================= CARD 1 : INPUT ========================= -->
+  <g>
+    <rect x="55" y="185" width="265" height="278" rx="16" fill="#f4f4f4"/>
+    <rect x="67" y="225" width="241" height="226" rx="12" fill="url(#card)"/>
+    <text x="86" y="214" fill="#8c0410" font-size="20" font-weight="800">1</text>
+    <text x="112" y="214" fill="#111" font-size="17" font-weight="800">INPUT</text>
+    <text x="286" y="214" font-size="18">🎯</text>
+    <text x="86" y="266" fill="#ffffff" font-size="17" font-weight="800">Operator sets a target</text>
+    <line x1="86" y1="278" x2="290" y2="278" stroke="#ffffff" stroke-width="1" opacity="0.4"/>
+    <text x="86" y="308" fill="#ffe3e4" font-size="14">• A single IP, range, or URL</text>
+    <text x="86" y="336" fill="#ffe3e4" font-size="14">• Entered in the C2 dashboard</text>
+    <text x="86" y="364" fill="#ffe3e4" font-size="14">• Must be inside the lab scope</text>
+    <rect x="86" y="392" width="204" height="40" rx="8" fill="#5c020a"/>
+    <text x="188" y="418" text-anchor="middle" fill="#ffd0d3" font-size="16" font-family="Consolas,monospace" font-weight="700">172.20.0.11</text>
+  </g>
+
+  <!-- ========================= CARD 2 : AGENTS EXECUTE ========================= -->
+  <g>
+    <rect x="367" y="185" width="265" height="278" rx="16" fill="#f4f4f4"/>
+    <rect x="379" y="225" width="241" height="226" rx="12" fill="url(#card)"/>
+    <text x="398" y="214" fill="#8c0410" font-size="20" font-weight="800">2</text>
+    <text x="424" y="214" fill="#111" font-size="17" font-weight="800">AGENTS EXECUTE</text>
+    <text x="598" y="214" font-size="18">⚔️</text>
+    <text x="398" y="266" fill="#ffffff" font-size="17" font-weight="800">The pipeline runs</text>
+    <line x1="398" y1="278" x2="602" y2="278" stroke="#ffffff" stroke-width="1" opacity="0.4"/>
+    <text x="398" y="306" fill="#ffe3e4" font-size="14">🔭 Reaper — reconnaissance</text>
+    <text x="398" y="334" fill="#ffe3e4" font-size="14">⚔️ Infiltrator — exploitation</text>
+    <text x="398" y="362" fill="#ffe3e4" font-size="14">👻 Ghost — post-exploitation</text>
+    <rect x="398" y="392" width="204" height="40" rx="8" fill="#5c020a"/>
+    <text x="500" y="417" text-anchor="middle" fill="#ffd0d3" font-size="13" font-weight="700">⛔ Human approves before attack</text>
+  </g>
+
+  <!-- ========================= CARD 3 : OUTPUT ========================= -->
+  <g>
+    <rect x="679" y="185" width="265" height="278" rx="16" fill="#f4f4f4"/>
+    <rect x="691" y="225" width="241" height="226" rx="12" fill="url(#card)"/>
+    <text x="710" y="214" fill="#8c0410" font-size="20" font-weight="800">3</text>
+    <text x="736" y="214" fill="#111" font-size="17" font-weight="800">OUTPUT</text>
+    <text x="910" y="214" font-size="18">📄</text>
+    <text x="710" y="266" fill="#ffffff" font-size="17" font-weight="800">You get a report</text>
+    <line x1="710" y1="278" x2="914" y2="278" stroke="#ffffff" stroke-width="1" opacity="0.4"/>
+    <text x="710" y="306" fill="#ffe3e4" font-size="14">• Confirmed vulnerabilities</text>
+    <text x="710" y="334" fill="#ffe3e4" font-size="14">• Loot &amp; credentials found</text>
+    <text x="710" y="362" fill="#ffe3e4" font-size="14">• AI risk &amp; impact summary</text>
+    <rect x="710" y="392" width="204" height="40" rx="8" fill="#5c020a"/>
+    <text x="812" y="417" text-anchor="middle" fill="#ffd0d3" font-size="14" font-weight="700">JSON + Markdown → /reports</text>
+  </g>
+
+  <!-- page badge -->
+  <rect x="942" y="462" width="34" height="30" rx="4" fill="#d0121a"/>
+  <text x="959" y="483" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="800">9</text>
+</svg>

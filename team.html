@@ -4,90 +4,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECLIPSE-RED | The Team</title>
+    <meta name="description" content="ECLIPSE-RED Research & Engineering Team - Bachelor of Cybersecurity, 2026.">
+    <title>ECLIPSE-RED | Engineering Team & Operators</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav style="padding: 20px; text-align: center; border-bottom: 1px solid var(--border);">
-        <a href="index.html"
-            style="color: var(--text-primary); text-decoration: none; margin: 0 15px; font-weight: bold;">HOME</a>
-        <a href="architecture.html"
-            style="color: var(--text-primary); text-decoration: none; margin: 0 15px; font-weight: bold;">ARCHITECTURE</a>
-        <a href="team.html"
-            style="color: var(--accent-red); text-decoration: none; margin: 0 15px; font-weight: bold;">TEAM</a>
+    <!-- Background Grid & Glowing Orbs -->
+    <div class="cyber-grid"></div>
+    <div class="bg-ambient-glow glow-top-left"></div>
+    <div class="bg-ambient-glow glow-bottom-right"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-symbol">🌑</span>
+                <span class="logo-text">ECLIPSE-RED</span>
+                <div class="nav-status">
+                    <span class="status-pulse"></span>
+                    <span>RESEARCH SQUAD</span>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="architecture.html" class="nav-link">ARCHITECTURE</a></li>
+                <li><a href="team.html" class="nav-link active">OPERATORS</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="https://github.com/cer04/ECLIPSE-RED" target="_blank" rel="noopener" class="btn-github">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
     </nav>
 
-    <div class="bg-glow"></div>
-
-    <header class="hero" style="height: 40vh; min-height: 300px;">
-        <div class="container">
-            <h1 class="hero-title" style="font-size: 3rem;">The Operators</h1>
-            <p class="hero-desc">The Minds Behind the Machine</p>
+    <!-- Header Section -->
+    <header class="hero" style="min-height: 45vh; padding-top: 120px;">
+        <div class="container hero-content">
+            <div class="hero-pill">
+                <i class="fas fa-users-gear"></i> Research & Engineering Squad
+            </div>
+            <h1 class="hero-title" style="font-size: 3.5rem;">System Operators</h1>
+            <p class="hero-subtitle">
+                The cybersecurity engineers and AI architects behind the development of ECLIPSE-RED.
+            </p>
         </div>
     </header>
 
-    <section class="container">
-        <div class="feature-grid">
+    <!-- Team Dossiers Section -->
+    <section class="container" style="padding-bottom: 80px;">
+        <div class="team-grid">
 
-            <!-- Member 1 -->
-            <div class="card" style="text-align: center;">
-                <div
-                    style="width: 100px; height: 100px; background: #333; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; border: 2px solid var(--accent-red);">
-                    <i class="fas fa-chess-king" style="font-size: 2rem; color: var(--accent-red);"></i>
+            <!-- Member 1: Laith -->
+            <div class="operator-dossier">
+                <div class="dossier-header">
+                    <div class="operator-avatar">
+                        <i class="fas fa-chess-king"></i>
+                    </div>
+                    <div>
+                        <span class="dossier-callsign">// CALLSIGN: OP-01</span>
+                        <h3 class="dossier-name">Laith Hussam Naser</h3>
+                        <span class="dossier-role">Lead AI Architect & Swarm Core</span>
+                    </div>
                 </div>
-                <h3 style="justify-content: center;">Laith Hussam Naser</h3>
-                <p style="color: var(--accent-red); font-weight: bold; margin-bottom: 15px;">Lead AI Architect</p>
-                <p style="font-size: 0.9rem;">Responsible for the Core Swarm Logic. Designs the prompt engineering
-                    layers and the "Decision Trees" that allow the AI to think strategically.</p>
-                <div style="margin-top: 20px; border-top: 1px solid var(--border); padding-top: 20px;">
-                    <span
-                        style="font-size: 0.8rem; background: rgba(255,255,255,0.1); padding: 5px 10px; border-radius: 10px;">Python</span>
-                    <span
-                        style="font-size: 0.8rem; background: rgba(255,255,255,0.1); padding: 5px 10px; border-radius: 10px;">LangChain</span>
+
+                <p class="dossier-desc">
+                    Engineered the central agent swarm logic, multi-step OODA state machine, and prompt boundary governance. Designed the LLM reasoning loops that allow agents to chain reconnaissance signals into verified exploits without hallucination.
+                </p>
+
+                <div class="dossier-skills">
+                    <span class="skill-pill">Python 3.11</span>
+                    <span class="skill-pill">LangChain / OODA</span>
+                    <span class="skill-pill">FastAPI</span>
+                    <span class="skill-pill">Ollama / DeepSeek</span>
+                    <span class="skill-pill">Docker Swarm</span>
+                </div>
+
+                <div class="dossier-footer">
+                    <span>SECURITY CLEARANCE: LVL-3</span>
+                    <a href="https://github.com/cer04" target="_blank" rel="noopener" style="color: var(--accent-red); text-decoration: none;">
+                        <i class="fab fa-github"></i> @cer04
+                    </a>
                 </div>
             </div>
 
-            <!-- Member 2 -->
-            <div class="card" style="text-align: center;">
-                <div
-                    style="width: 100px; height: 100px; background: #333; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; border: 2px solid var(--accent-red);">
-                    <i class="fas fa-code-branch" style="font-size: 2rem; color: var(--accent-red);"></i>
+            <!-- Member 2: Wa'ed -->
+            <div class="operator-dossier">
+                <div class="dossier-header">
+                    <div class="operator-avatar" style="border-color: var(--accent-cyan); color: var(--accent-cyan); box-shadow: 0 0 15px var(--cyan-glow);">
+                        <i class="fas fa-crosshairs"></i>
+                    </div>
+                    <div>
+                        <span class="dossier-callsign">// CALLSIGN: OP-02</span>
+                        <h3 class="dossier-name">Wa'ed Mohammed Smhan</h3>
+                        <span class="dossier-role" style="color: var(--accent-cyan);">Offensive Engineer & Weaponizer</span>
+                    </div>
                 </div>
-                <h3 style="justify-content: center;">Wa'ed Mohammed Smhan</h3>
-                <p style="color: var(--accent-red); font-weight: bold; margin-bottom: 15px;">Offensive Engineer</p>
-                <p style="font-size: 0.9rem;">The "Weaponizer." Builds the Python bridges between the AI and real-world
-                    tools like Nmap and Metasploit. Ensures exploits execute safely.</p>
-                <div style="margin-top: 20px; border-top: 1px solid var(--border); padding-top: 20px;">
-                    <span
-                        style="font-size: 0.8rem; background: rgba(255,255,255,0.1); padding: 5px 10px; border-radius: 10px;">Bash</span>
-                    <span
-                        style="font-size: 0.8rem; background: rgba(255,255,255,0.1); padding: 5px 10px; border-radius: 10px;">Docker</span>
+
+                <p class="dossier-desc">
+                    Developed the offensive toolchain integration layers, bridging the AI controller with Nmap, Nuclei, and custom exploit harnesses. Implemented CWE-88 argument guardrails and sandbox network containment protocols.
+                </p>
+
+                <div class="dossier-skills">
+                    <span class="skill-pill">Offensive Tooling</span>
+                    <span class="skill-pill">CWE Guardrails</span>
+                    <span class="skill-pill">Linux Hardening</span>
+                    <span class="skill-pill">Metasploit RPC</span>
+                    <span class="skill-pill">Network Probes</span>
+                </div>
+
+                <div class="dossier-footer">
+                    <span>SECURITY CLEARANCE: LVL-3</span>
+                    <a href="https://github.com/cer04" target="_blank" rel="noopener" style="color: var(--accent-cyan); text-decoration: none;">
+                        <i class="fab fa-github"></i> Profile
+                    </a>
                 </div>
             </div>
 
-            <!-- Member 3 -->
-            <div class="card" style="text-align: center;">
-                <div
-                    style="width: 100px; height: 100px; background: #333; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; border: 2px solid var(--accent-red);">
-                    <i class="fas fa-layer-group" style="font-size: 2rem; color: var(--accent-red);"></i>
+            <!-- Member 3: Abdallah -->
+            <div class="operator-dossier">
+                <div class="dossier-header">
+                    <div class="operator-avatar" style="border-color: var(--accent-green); color: var(--accent-green); box-shadow: 0 0 15px var(--green-glow);">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <div>
+                        <span class="dossier-callsign">// CALLSIGN: OP-03</span>
+                        <h3 class="dossier-name">Abdallah Ahmad Muawad</h3>
+                        <span class="dossier-role" style="color: var(--accent-green);">C2 Systems & War Room Lead</span>
+                    </div>
                 </div>
-                <h3 style="justify-content: center;">Abdallah Ahmad Muawad</h3>
-                <p style="color: var(--accent-red); font-weight: bold; margin-bottom: 15px;">C2 Systems Lead</p>
-                <p style="font-size: 0.9rem;">Designing the "Moonlight" Dashboard. Translates complex attack data into
-                    the 3D visual War Room that defines the project's user experience.</p>
-                <div style="margin-top: 20px; border-top: 1px solid var(--border); padding-top: 20px;">
-                    <span
-                        style="font-size: 0.8rem; background: rgba(255,255,255,0.1); padding: 5px 10px; border-radius: 10px;">React</span>
-                    <span
-                        style="font-size: 0.8rem; background: rgba(255,255,255,0.1); padding: 5px 10px; border-radius: 10px;">Three.js</span>
+
+                <p class="dossier-desc">
+                    Architected the C2 War Room interactive interface, real-time WebSocket event bus, and topological graph visualization. Engineered the operator terminal and telemetry dashboards for sub-second situational awareness.
+                </p>
+
+                <div class="dossier-skills">
+                    <span class="skill-pill">React 18</span>
+                    <span class="skill-pill">WebSockets</span>
+                    <span class="skill-pill">UI / UX Systems</span>
+                    <span class="skill-pill">Zustand</span>
+                    <span class="skill-pill">Data Visualization</span>
+                </div>
+
+                <div class="dossier-footer">
+                    <span>SECURITY CLEARANCE: LVL-3</span>
+                    <a href="https://github.com/cer04" target="_blank" rel="noopener" style="color: var(--accent-green); text-decoration: none;">
+                        <i class="fab fa-github"></i> Profile
+                    </a>
                 </div>
             </div>
 
         </div>
     </section>
+
+    <!-- Academic Affiliation Card -->
+    <section class="container" style="padding-bottom: 80px;">
+        <div class="cyber-card" style="border-color: var(--border-accent); text-align: center; max-width: 900px; margin: 0 auto;">
+            <div style="font-size: 2.5rem; color: var(--accent-red); margin-bottom: 16px;">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3 style="font-size: 1.6rem; margin-bottom: 12px;">Academic Defense & Institution</h3>
+            <p style="font-size: 1.05rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto 20px;">
+                Submitted in partial fulfillment of the requirements for the degree of 
+                <strong>Bachelor of Cybersecurity</strong> at <strong>Al-Ahliyya Amman University</strong> (Faculty of Information Technology).
+            </p>
+            <div style="display: inline-flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
+                <span class="card-mitre-tag"><i class="fas fa-calendar"></i> Academic Year: <strong>2025–2026</strong></span>
+                <span class="card-mitre-tag"><i class="fas fa-award"></i> Department: <strong>Cybersecurity</strong></span>
+                <span class="card-mitre-tag"><i class="fas fa-code-branch"></i> Status: <strong>Open Source (MIT)</strong></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <a href="index.html">HOME</a>
+                <a href="architecture.html">ARCHITECTURE</a>
+                <a href="team.html">OPERATORS</a>
+                <a href="https://github.com/cer04/ECLIPSE-RED" target="_blank" rel="noopener">GITHUB</a>
+            </div>
+            <p style="margin-bottom: 8px;">
+                <strong>ECLIPSE-RED</strong> — Autonomous Agentic Red-Teaming Engine
+            </p>
+            <p style="color: var(--text-muted); font-size: 0.8rem;">
+                Al-Ahliyya Amman University · Bachelor of Cybersecurity · Academic Graduation Thesis 2026. Released under the MIT License.
+            </p>
+        </div>
+    </footer>
 </body>
 
 </html>

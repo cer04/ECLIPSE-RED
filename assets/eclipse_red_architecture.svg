@@ -1,0 +1,190 @@
+<svg viewBox="0 0 1536 1024" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <style>
+      .box   { fill:#140708; stroke:#ff2531; stroke-width:2.2; rx:14; }
+      .h     { fill:#ff2531; font-weight:800; }
+      .sub   { fill:#f4f4f4; font-weight:700; }
+      .b     { fill:#e9c9cc; font-size:15px; }
+      .out   { fill:#ff6b73; font-weight:700; font-size:14px; }
+      .outv  { fill:#d98f95; font-size:13px; font-family:Consolas,'Courier New',monospace; }
+      .lbl   { fill:#ffb3b8; font-size:14px; font-weight:700; }
+      .icn   { font-size:30px; }
+      .div   { stroke:#ff2531; stroke-width:1; opacity:.45; }
+    </style>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#ff2531"/>
+    </marker>
+    <marker id="arrd" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#ff5b64"/>
+    </marker>
+    <filter id="glow"><feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#ff2531" flood-opacity="0.5"/></filter>
+  </defs>
+
+  <rect x="0" y="0" width="1536" height="1024" fill="#080404"/>
+
+  <!-- corner brackets -->
+  <g stroke="#ff2531" stroke-width="3" fill="none" opacity="0.8">
+    <path d="M20,70 L20,20 L70,20"/>
+    <path d="M1516,70 L1516,20 L1466,20"/>
+    <path d="M20,954 L20,1004 L70,1004"/>
+    <path d="M1516,954 L1516,1004 L1466,1004"/>
+  </g>
+
+  <text x="768" y="52" text-anchor="middle" class="h" font-size="42" letter-spacing="3" filter="url(#glow)">ECLIPSE-RED AGENT ARCHITECTURE</text>
+
+  <!-- ===================== USER ===================== -->
+  <rect class="box" x="600" y="74" width="336" height="94" rx="14"/>
+  <text x="628" y="122" class="icn">👤</text>
+  <text x="672" y="112" class="sub" font-size="22">USER</text>
+  <text x="672" y="136" class="b">Enters target via</text>
+  <text x="672" y="156" class="b">React dashboard / API</text>
+
+  <!-- ===================== ORCHESTRATOR ===================== -->
+  <rect class="box" x="556" y="208" width="424" height="128" rx="16" filter="url(#glow)"/>
+  <text x="590" y="262" class="icn">⚙️</text>
+  <text x="640" y="248" class="h" font-size="24">ORCHESTRATOR</text>
+  <text x="640" y="276" class="b">OODA brain — coordinates all agents</text>
+  <text x="640" y="298" class="b">Passes each phase's dict to the next</text>
+  <text x="640" y="320" class="b">Aggregates everything into final report</text>
+
+  <!-- ===================== MAIN ROW BOXES ===================== -->
+  <!-- REAPER -->
+  <rect class="box" x="44" y="372" width="312" height="342" rx="14"/>
+  <text x="70" y="422" class="icn">🔭</text>
+  <text x="118" y="410" class="h" font-size="23">REAPER</text>
+  <text x="118" y="432" class="sub" font-size="15">Reconnaissance</text>
+  <line class="div" x1="66" y1="446" x2="334" y2="446"/>
+  <text x="70" y="474" class="b">• Port &amp; service scanning (Nmap)</text>
+  <text x="70" y="500" class="b">• Web &amp; directory discovery</text>
+  <text x="70" y="526" class="b">• Tech fingerprinting</text>
+  <text x="70" y="552" class="b">• DNS / Whois / WAF audit</text>
+  <text x="70" y="578" class="b">• AI intelligence summary</text>
+  <line class="div" x1="66" y1="606" x2="334" y2="606"/>
+  <text x="70" y="634" class="out">Output:</text>
+  <text x="70" y="656" class="outv">recon_data (dict)</text>
+  <text x="70" y="676" class="outv">{ hosts[], technologies,</text>
+  <text x="70" y="694" class="outv">  discovered_paths, ... }</text>
+
+  <!-- INFILTRATOR -->
+  <rect class="box" x="452" y="372" width="300" height="342" rx="14"/>
+  <text x="478" y="422" class="icn">⚔️</text>
+  <text x="526" y="410" class="h" font-size="23">INFILTRATOR</text>
+  <text x="526" y="432" class="sub" font-size="15">Exploitation</text>
+  <line class="div" x1="474" y1="446" x2="730" y2="446"/>
+  <text x="478" y="474" class="b">• SQLi, XSS, IDOR, SSTI</text>
+  <text x="478" y="500" class="b">• Auth bypass, traversal</text>
+  <text x="478" y="526" class="b">• CORS, redirect, CmdI</text>
+  <text x="478" y="552" class="b">• Brute force (Hydra)</text>
+  <text x="478" y="578" class="b">• Service &amp; SSH audits</text>
+  <line class="div" x1="474" y1="606" x2="730" y2="606"/>
+  <text x="478" y="634" class="out">Output:</text>
+  <text x="478" y="656" class="outv">exploit_data (dict)</text>
+  <text x="478" y="676" class="outv">{ vulnerabilities: [</text>
+  <text x="478" y="694" class="outv">  {type, severity, url...} ] }</text>
+
+  <!-- GHOST -->
+  <rect class="box" x="846" y="372" width="278" height="342" rx="14"/>
+  <text x="872" y="422" class="icn">👻</text>
+  <text x="920" y="410" class="h" font-size="23">GHOST</text>
+  <text x="920" y="432" class="sub" font-size="15">Post-Exploitation</text>
+  <line class="div" x1="868" y1="446" x2="1102" y2="446"/>
+  <text x="872" y="474" class="b">• DB extraction (SQLMap)</text>
+  <text x="872" y="500" class="b">• IDOR harvest</text>
+  <text x="872" y="526" class="b">• Credential reuse</text>
+  <text x="872" y="552" class="b">• File / data exfiltration</text>
+  <text x="872" y="578" class="b">• Lateral movement</text>
+  <line class="div" x1="868" y1="606" x2="1102" y2="606"/>
+  <text x="872" y="634" class="out">Output:</text>
+  <text x="872" y="656" class="outv">loot_data (dict)</text>
+  <text x="872" y="676" class="outv">{ loot[], credentials[],</text>
+  <text x="872" y="694" class="outv">  lateral_movement[] }</text>
+
+  <!-- FINAL REPORT -->
+  <rect class="box" x="1214" y="372" width="278" height="342" rx="14"/>
+  <text x="1240" y="422" class="icn">📄</text>
+  <text x="1288" y="410" class="h" font-size="21">FINAL REPORT</text>
+  <text x="1288" y="432" class="sub" font-size="15">Aggregated Results</text>
+  <line class="div" x1="1236" y1="446" x2="1470" y2="446"/>
+  <text x="1240" y="474" class="b">• Reconnaissance</text>
+  <text x="1240" y="500" class="b">• Exploits &amp; vulnerabilities</text>
+  <text x="1240" y="526" class="b">• Loot &amp; credentials</text>
+  <text x="1240" y="552" class="b">• Summary &amp; risk analysis</text>
+  <text x="1240" y="578" class="b">• Immutable evidence trail</text>
+  <line class="div" x1="1236" y1="606" x2="1470" y2="606"/>
+  <text x="1240" y="634" class="out">Output:</text>
+  <text x="1240" y="656" class="outv">JSON + Markdown</text>
+  <text x="1240" y="676" class="outv">saved to /reports</text>
+
+  <!-- ===================== SIDE PATH BOXES ===================== -->
+  <!-- SCOUT -->
+  <rect class="box" x="320" y="772" width="340" height="182" rx="14" stroke-dasharray="7 5"/>
+  <text x="346" y="822" class="icn">🔎</text>
+  <text x="394" y="810" class="h" font-size="22">SCOUT</text>
+  <text x="394" y="832" class="sub" font-size="15">Path Discovery (lightweight)</text>
+  <line class="div" x1="342" y1="846" x2="638" y2="846"/>
+  <text x="346" y="874" class="b">• httpx path probing &amp; scoring</text>
+  <text x="346" y="900" class="b">• Alternate entrypoint (single objective)</text>
+  <text x="346" y="926" class="b">• Writes lessons to memory</text>
+
+  <!-- RESEARCHER -->
+  <rect class="box" x="852" y="772" width="340" height="182" rx="14" stroke-dasharray="7 5"/>
+  <text x="878" y="822" class="icn">📚</text>
+  <text x="926" y="810" class="h" font-size="22">RESEARCHER</text>
+  <text x="926" y="832" class="sub" font-size="15">OSINT &amp; Vulnerability Intel</text>
+  <line class="div" x1="874" y1="846" x2="1170" y2="846"/>
+  <text x="878" y="874" class="b">• NVD, MITRE, ExploitDB (read-only)</text>
+  <text x="878" y="900" class="b">• GitHub, OWASP, ATT&amp;CK (allowlist)</text>
+  <text x="878" y="926" class="b">• Cached in knowledge.jsonl</text>
+
+  <!-- ===================== ARROWS (main pipeline) ===================== -->
+  <!-- user -> orchestrator -->
+  <line x1="768" y1="168" x2="768" y2="204" stroke="#ff2531" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- orchestrator -> reaper (elbow left) -->
+  <path d="M556,300 L200,300 L200,368" fill="none" stroke="#ff2531" stroke-width="2.5" marker-end="url(#arr)"/>
+  <!-- orchestrator -> infiltrator (down center) -->
+  <line x1="602" y1="336" x2="602" y2="368" stroke="#ff2531" stroke-width="2.5" marker-end="url(#arr)"/>
+  <!-- ghost -> orchestrator (return up) -->
+  <path d="M985,432 L985,300 L980,300" fill="none" stroke="#ff2531" stroke-width="2.5" marker-end="url(#arr)"/>
+  <!-- orchestrator -> final report (elbow right) -->
+  <path d="M1353,432 L1353,300 L980,300" fill="none" stroke="#ff2531" stroke-width="2.5" opacity="0.55" stroke-dasharray="2 0"/>
+
+  <!-- reaper -> infiltrator -->
+  <line x1="356" y1="536" x2="452" y2="536" stroke="#ff2531" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="404" y="512" text-anchor="middle" class="lbl">Passes</text>
+  <text x="404" y="528" text-anchor="middle" class="lbl">recon_data</text>
+
+  <!-- infiltrator -> ghost -->
+  <line x1="752" y1="536" x2="846" y2="536" stroke="#ff2531" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="799" y="512" text-anchor="middle" class="lbl">Passes</text>
+  <text x="799" y="528" text-anchor="middle" class="lbl">exploit_data</text>
+
+  <!-- ghost -> final report -->
+  <line x1="1124" y1="536" x2="1214" y2="536" stroke="#ff2531" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="1169" y="512" text-anchor="middle" class="lbl">Returns</text>
+  <text x="1169" y="528" text-anchor="middle" class="lbl">loot_data</text>
+
+  <!-- HUMAN APPROVAL GATE badge between reaper and infiltrator -->
+  <rect x="300" y="726" width="212" height="30" rx="15" fill="#2a0d0f" stroke="#ff2531" stroke-width="1.6"/>
+  <text x="406" y="746" text-anchor="middle" fill="#ffd0d3" font-size="13" font-weight="700">⛔ Human approval gate</text>
+  <path d="M406,714 L406,726" stroke="#ff2531" stroke-width="1.6" opacity="0.7"/>
+
+  <!-- ===================== SIDE PATH ARROWS (dashed) ===================== -->
+  <line x1="660" y1="850" x2="852" y2="850" stroke="#ff5b64" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrd)" marker-start="url(#arrd)"/>
+  <text x="756" y="838" text-anchor="middle" fill="#ff9aa0" font-size="13" font-weight="700">Requests intel</text>
+
+  <!-- scout up to reaper/infiltrator -->
+  <path d="M420,772 L420,742 L200,742 L200,714" fill="none" stroke="#ff5b64" stroke-width="1.6" stroke-dasharray="6 5" marker-end="url(#arrd)" opacity="0.8"/>
+  <path d="M560,772 L560,742 L602,742 L602,714" fill="none" stroke="#ff5b64" stroke-width="1.6" stroke-dasharray="6 5" marker-end="url(#arrd)" opacity="0.8"/>
+  <!-- researcher up to ghost -->
+  <path d="M1020,772 L1020,742 L985,742 L985,714" fill="none" stroke="#ff5b64" stroke-width="1.6" stroke-dasharray="6 5" marker-end="url(#arrd)" opacity="0.8"/>
+
+  <!-- ===================== LEGEND ===================== -->
+  <rect x="44" y="770" width="252" height="96" rx="10" fill="#0f0606" stroke="#ff2531" stroke-width="1.6"/>
+  <line x1="60" y1="802" x2="104" y2="802" stroke="#ff2531" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="114" y="807" fill="#f4f4f4" font-size="13">Main pipeline (in-memory dict)</text>
+  <line x1="60" y1="834" x2="104" y2="834" stroke="#ff5b64" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrd)"/>
+  <text x="114" y="839" fill="#f4f4f4" font-size="13">Side path / optional support</text>
+
+  <text x="1492" y="990" text-anchor="end" class="h" font-size="30" letter-spacing="4" opacity="0.85">ECLIPSE-RED</text>
+</svg>

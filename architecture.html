@@ -4,95 +4,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECLIPSE-RED | System Architecture</title>
+    <meta name="description" content="ECLIPSE-RED System Architecture: Microservices, OODA loop, and isolated Docker network segmentation.">
+    <title>ECLIPSE-RED | System Architecture & Engineering</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav style="padding: 20px; text-align: center; border-bottom: 1px solid var(--border);">
-        <a href="index.html"
-            style="color: var(--text-primary); text-decoration: none; margin: 0 15px; font-weight: bold;">HOME</a>
-        <a href="architecture.html"
-            style="color: var(--accent-red); text-decoration: none; margin: 0 15px; font-weight: bold;">ARCHITECTURE</a>
-        <a href="team.html"
-            style="color: var(--text-primary); text-decoration: none; margin: 0 15px; font-weight: bold;">TEAM</a>
+    <!-- Background Grid & Glowing Orbs -->
+    <div class="cyber-grid"></div>
+    <div class="bg-ambient-glow glow-top-left"></div>
+    <div class="bg-ambient-glow glow-bottom-right"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-symbol">🌑</span>
+                <span class="logo-text">ECLIPSE-RED</span>
+                <div class="nav-status">
+                    <span class="status-pulse"></span>
+                    <span>ARCHITECTURE CORE</span>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="architecture.html" class="nav-link active">ARCHITECTURE</a></li>
+                <li><a href="team.html" class="nav-link">OPERATORS</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="https://github.com/cer04/ECLIPSE-RED" target="_blank" rel="noopener" class="btn-github">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
     </nav>
 
-    <div class="bg-glow"></div>
-
-    <header class="hero" style="height: 40vh; min-height: 300px;">
-        <div class="container">
-            <h1 class="hero-title" style="font-size: 3rem;">System Architecture</h1>
-            <p class="hero-desc">The Engineering Behind the Swarm</p>
+    <!-- Architecture Header -->
+    <header class="hero" style="min-height: 45vh; padding-top: 120px;">
+        <div class="container hero-content">
+            <div class="hero-pill">
+                <i class="fas fa-microchip"></i> System Engineering & Zero-Trust Segmentation
+            </div>
+            <h1 class="hero-title" style="font-size: 3.5rem;">System Architecture</h1>
+            <p class="hero-subtitle">
+                Deconstructing the closed-loop OODA orchestrator, microservices control plane, and isolated cyber-range perimeter.
+            </p>
         </div>
     </header>
 
-    <section class="container">
-        <div class="card" style="margin-bottom: 40px;">
-            <h2 style="color: var(--accent-red); margin-bottom: 20px;">High-Level Overview</h2>
-            <p>ECLIPSE-RED is built on a <strong>Microservices Architecture</strong> orchestrated by a central AI
-                Controller. The system operates in a closed-loop "Observe-Orient-Decide-Act" (OODA) cycle.</p>
+    <!-- High-Level Overview & Diagram -->
+    <section class="container" style="padding-bottom: 60px;">
+        <div class="section-header">
+            <span class="section-tag">// TOPOLOGICAL BLUEPRINT</span>
+            <h2 class="section-title">End-to-End System Blueprint</h2>
+            <p class="section-desc">
+                Dual-plane architectural separation ensuring strict containment between the AI C2 Control Plane and the targeted sandboxed networks.
+            </p>
         </div>
 
-        <div class="feature-grid">
-            <!-- Node 1 -->
-            <div class="card">
-                <h3><i class="fas fa-brain"></i> The Brain (C2)</h3>
-                <p><strong>Tech:</strong> Python, LangChain, GPT-4 API</p>
-                <p style="font-size: 0.9rem; margin-top: 10px; color: var(--text-secondary);">The central command unit.
-                    It receives signals from agents, maintains the "Attack State," and issues new objectives. It handles
-                    the logic to prevent hallucinations.</p>
-            </div>
-
-            <!-- Node 2 -->
-            <div class="card">
-                <h3><i class="fas fa-satellite-dish"></i> The Sensors</h3>
-                <p><strong>Tech:</strong> Nmap, Masscan, Burp Suite API</p>
-                <p style="font-size: 0.9rem; margin-top: 10px; color: var(--text-secondary);">Raw data collectors. They
-                    feed port status, HTTP headers, and banner grabs into the Vector Database for the AI to analyze.</p>
-            </div>
-
-            <!-- Node 3 -->
-            <div class="card">
-                <h3><i class="fas fa-terminal"></i> The Executors</h3>
-                <p><strong>Tech:</strong> Metasploit RPC, Custom Python Exploits</p>
-                <p style="font-size: 0.9rem; margin-top: 10px; color: var(--text-secondary);">The "Hands" of the system.
-                    These are scripted modules that the AI can trigger with specific parameters (e.g., "Run
-                    exploit/multi/handler on port 4444").</p>
-            </div>
+        <div style="background: rgba(13, 17, 23, 0.7); border: 1px solid var(--border-accent); border-radius: var(--radius-lg); padding: 16px; box-shadow: 0 0 40px var(--accent-glow-subtle); margin-bottom: 50px;">
+            <img src="assets/eclipse_red_architecture.png" alt="ECLIPSE-RED System Architecture Diagram" style="width: 100%; height: auto; border-radius: var(--radius-md); display: block;" />
         </div>
-    </section>
 
-    <section class="container" style="margin-top: 50px;">
-        <h2 class="section-title">The "Moonlight" Differential</h2>
-        <div class="card">
-            <div style="display: flex; gap: 20px; align-items: flex-start;">
-                <div style="flex: 1;">
-                    <h3 style="color: #fff;">Conventional Scanners vs. ECLIPSE-RED</h3>
-                    <ul style="list-style: none; margin-top: 20px; color: var(--text-secondary);">
-                        <li style="margin-bottom: 15px;">❌ <strong>Scanners:</strong> blindly check for known CVEs.</li>
-                        <li style="margin-bottom: 15px;">❌ <strong>Scanners:</strong> generate 1000s of false positives.
-                        </li>
-                        <li style="margin-bottom: 15px;">❌ <strong>Scanners:</strong> cannot understand business logic
-                            (e.g., "Buy for $0").</li>
-                    </ul>
+        <!-- 3 Core Architectural Pillars -->
+        <div class="cards-grid">
+            <div class="cyber-card">
+                <div class="card-header-icon">
+                    <i class="fas fa-brain"></i>
                 </div>
-                <div style="flex: 1;">
-                    <h3 style="color: #fff;">&nbsp;</h3>
-                    <ul style="list-style: none; margin-top: 20px; color: var(--text-secondary);">
-                        <li style="margin-bottom: 15px;"><span style="color: var(--accent-red);">✔</span>
-                            <strong>ECLIPSE-RED:</strong> chains multiple weak findings into a critical exploit.</li>
-                        <li style="margin-bottom: 15px;"><span style="color: var(--accent-red);">✔</span>
-                            <strong>ECLIPSE-RED:</strong> verifies exploits before reporting them.</li>
-                        <li style="margin-bottom: 15px;"><span style="color: var(--accent-red);">✔</span>
-                            <strong>ECLIPSE-RED:</strong> reads source code to find 0-day logic flaws.</li>
-                    </ul>
+                <h3>1. The C2 Brain (Control Plane)</h3>
+                <p>
+                    Built with <strong>FastAPI, WebSockets, and Python 3.11</strong>. Interfaces with local LLM engines (Ollama / DeepSeek / GPT-4) to parse tactical goals and maintain the active attack graph without hallucination.
+                </p>
+                <div class="card-mitre-tag">
+                    <i class="fas fa-shield"></i> JWT RBAC · 300s Watchdog · Non-Root
+                </div>
+            </div>
+
+            <div class="cyber-card">
+                <div class="card-header-icon">
+                    <i class="fas fa-satellite-dish"></i>
+                </div>
+                <h3>2. Sensory Collectors</h3>
+                <p>
+                    Raw telemetry aggregators integrating <strong>Nmap, Nuclei, and custom async socket probes</strong>. Standardizes banner grabs, port states, and endpoint parameters into structured JSON for LLM evaluation.
+                </p>
+                <div class="card-mitre-tag">
+                    <i class="fas fa-filter"></i> CWE-88 Flag Guard · CIDR Allowlist
+                </div>
+            </div>
+
+            <div class="cyber-card">
+                <div class="card-header-icon">
+                    <i class="fas fa-terminal"></i>
+                </div>
+                <h3>3. Precision Weaponizers</h3>
+                <p>
+                    Python-based modular exploit drivers triggered with strictly verified arguments. Synthesizes blind SQLi, IDOR payloads, and credential brute-force routines with built-in time-delay verification.
+                </p>
+                <div class="card-mitre-tag">
+                    <i class="fas fa-bolt"></i> 100% Viability Verification Prior to Alert
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- The OODA Loop Section -->
+    <section class="container" style="padding-bottom: 80px;">
+        <div class="section-header">
+            <span class="section-tag">// DECISION CYCLE</span>
+            <h2 class="section-title">The OODA Autonomous Loop</h2>
+            <p class="section-desc">
+                How ECLIPSE-RED adapts dynamically to network responses, replacing static scripts with continuous cognitive cycles.
+            </p>
+        </div>
+
+        <div class="ooda-grid">
+            <div class="ooda-card">
+                <div class="ooda-step">01</div>
+                <h4>OBSERVE</h4>
+                <p>
+                    Passive enumeration of active ports, HTTP headers, API schemas, and OS fingerprint banners across target subnet.
+                </p>
+            </div>
+
+            <div class="ooda-card">
+                <div class="ooda-step">02</div>
+                <h4>ORIENT</h4>
+                <p>
+                    Cross-references discovered services against MITRE ATT&CK techniques, CVE knowledge bases, and target history.
+                </p>
+            </div>
+
+            <div class="ooda-card">
+                <div class="ooda-step">03</div>
+                <h4>DECIDE</h4>
+                <p>
+                    Orchestrator computes the optimal exploit chain, verifies CIDR boundaries, and delegates execution to specialized agents.
+                </p>
+            </div>
+
+            <div class="ooda-card">
+                <div class="ooda-step">04</div>
+                <h4>ACT</h4>
+                <p>
+                    Dispatches weaponized payload, verifies proof-of-compromise, and triggers lateral reconnaissance via Ghost agent.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Network Segmentation & Range Specification -->
+    <section class="container" style="padding-bottom: 80px;">
+        <div class="section-header">
+            <span class="section-tag">// PERIMETER CONFINEMENT</span>
+            <h2 class="section-title">Cyber Range Isolation Guarantee</h2>
+            <p class="section-desc">
+                Zero external exposure: Target containers exist strictly within an unrouted Docker bridge network.
+            </p>
+        </div>
+
+        <div class="comparison-table-wrapper">
+            <table class="comp-table">
+                <thead>
+                    <tr>
+                        <th>Node / Service</th>
+                        <th>Network Subnet</th>
+                        <th>IP Address</th>
+                        <th>External Exposure</th>
+                        <th>Role / Target Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>eclipse-backend</code></td>
+                        <td>Control Plane</td>
+                        <td><code>172.20.0.100</code></td>
+                        <td><code>127.0.0.1:8000</code></td>
+                        <td>C2 API & WebSocket Engine</td>
+                    </tr>
+                    <tr>
+                        <td><code>eclipse-target-dvwa</code></td>
+                        <td><code>target-net</code> (internal: true)</td>
+                        <td><code>172.20.0.10</code></td>
+                        <td class="status-bad"><i class="fas fa-lock"></i> NONE (Isolated)</td>
+                        <td>Vulnerable Web App (XSS, Command Inj)</td>
+                    </tr>
+                    <tr>
+                        <td><code>eclipse-target-api</code></td>
+                        <td><code>target-net</code> (internal: true)</td>
+                        <td><code>172.20.0.11</code></td>
+                        <td class="status-bad"><i class="fas fa-lock"></i> NONE (Isolated)</td>
+                        <td>Custom Flask REST API (SQLi, IDOR)</td>
+                    </tr>
+                    <tr>
+                        <td><code>eclipse-target-ssh</code></td>
+                        <td><code>target-net</code> (internal: true)</td>
+                        <td><code>172.20.0.12</code></td>
+                        <td class="status-bad"><i class="fas fa-lock"></i> NONE (Isolated)</td>
+                        <td>SSH Honeypot (Weak Creds, Sudo Pivot)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <a href="index.html">HOME</a>
+                <a href="architecture.html">ARCHITECTURE</a>
+                <a href="team.html">OPERATORS</a>
+                <a href="https://github.com/cer04/ECLIPSE-RED" target="_blank" rel="noopener">GITHUB</a>
+            </div>
+            <p style="margin-bottom: 8px;">
+                <strong>ECLIPSE-RED</strong> — Autonomous Agentic Red-Teaming Engine
+            </p>
+            <p style="color: var(--text-muted); font-size: 0.8rem;">
+                Al-Ahliyya Amman University · Bachelor of Cybersecurity · Academic Graduation Thesis 2026. Released under the MIT License.
+            </p>
+        </div>
+    </footer>
 </body>
 
 </html>
